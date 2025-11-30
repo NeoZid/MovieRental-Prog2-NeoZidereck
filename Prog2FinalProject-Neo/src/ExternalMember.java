@@ -26,6 +26,14 @@ public class ExternalMember extends Person implements Payment{
 	    }
 	}
 	
+	public boolean validateIdRegistration(int personId) {
+		if(personId==this.personId) {
+			System.out.println("Id already taken, re-enter a new id");
+			return false;
+		} 
+		return true;
+	}
+	
 	public void status() {
 		System.out.println("This person" + this.name + "is an external member");
 	}

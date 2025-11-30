@@ -85,6 +85,9 @@ public class MainDriver {
 						System.out.println("Enter ID");
 						int id1 = in.nextInt();
 						in.nextLine();
+						if (p.validateIdRegistration(id1)!=true) {
+							break;
+						}
 						System.out.println("Enter Name");
 						String name1 = in.nextLine();
 						System.out.println("Enter age");
